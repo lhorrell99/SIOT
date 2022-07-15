@@ -1,0 +1,11 @@
+.DS_Store
+.vscode/
+/*.env
+MKRGSM1400/secrets.h
+uno/refactor.ino
+analysis/data/
+
+# node
+node_modules/
+npm-debug.log
+package-lock.json
