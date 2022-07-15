@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIOT Data Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+    <script type="module" src="main.js"></script>
+
+</head>
+<main>
+    <h1>DE4 SIOT Data Dashboard</h1>
+
+    <p id="introPara">
+        <span class="bold">Introduction:</span> this dashboard displays data collected during my cycling commutes in London, to assess the correlation between particulate matter (PM) concentration and traffic congestion. PM data is collected from a mobile sensing rig, and traffic data is retrieved from the TomTom web API.
+    </p>
+
+    <div id="controls" class="centered">
+        <div id="changeSession" class="centred">
+            <button id="decrementSession" class="button incDec">&lt</button>
+            <button id="incrementSession" class="button incDec">&gt</button>
+            <span class="bold">select session</span>
+        </div>
+        <div id="currentSession" class="centred">
+            <p class="bold padPara">current session: <span id="currentSessionLabel" class="bold blue"></span></p>
+        </div>
+        <a id="viewGitHubRepo" class="button" href="https://github.com/lhorrell99/SIOT">view GitHub repo</a>
+    </div>
+
+    <div id="graphArea">
+        <div id="sessionMapPlotPM" class="plotArea"></div>
+        <div id="sessionMapPlotTF" class="plotArea"></div>
+        <p id="MapPlotPMLabel" class="graphLabel">particulate matter concentrations (micrograms/cubic metre) on session route</p>
+        <p id="MapPlotTFLabel" class="graphLabel">traffic flow factor of delay (versus free flow travel time) on session route</p>
+        <div id="timeSeriesPMDF" class="plotArea"></div>
+        <p id="timeSeriesLabel" class="graphLabel">particulate matter concentration and traffic flow delay factor time series plot</p>
+    </div>
+    <p id="footer" class="centred">Louis Horrell (2021)</p>
+</main>
+</html>

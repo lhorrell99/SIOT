@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13",
+    "mqtt": "^4.2.8",
+    "node-fetch": "^3.1.0"
+  },
+  "name": "main_code_repo",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "nodemon": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhorrell99/SIOT.git"
+  },
+  "author": "Louis Horrell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lhorrell99/SIOT/issues"
+  },
+  "homepage": "https://github.com/lhorrell99/SIOT#readme"
+}

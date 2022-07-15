@@ -1,0 +1,251 @@
+:root 
+{
+    --blue: rgb(0, 119, 237);
+    --bodygrey: rgb(52, 52, 52);
+    --lightgrey: rgb(246, 246, 246);
+    --midgrey: rgb(100, 100, 100);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: var(--bodygrey);
+}
+
+html 
+{
+    font-size: 18px;
+}
+
+main
+{
+    width: 100%;
+    overflow: scroll;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 15% 70% 15%;
+    gap: 1.5rem 1.5rem;
+}
+
+h1
+{
+    font-size: 36px;
+    grid-area: 1 / 2 / 2 / 3;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+p 
+{
+    line-height: 1.5em;
+}
+
+/* class */
+
+.bold
+{
+    font-weight: 700;
+}
+
+.blue
+{
+    color: var(--blue);
+}
+
+.padPara
+{
+    padding: 1rem;
+}
+
+.centred
+{
+    text-align: center;
+}
+
+.plotArea
+{
+    height: 500px;
+    overflow: hidden;
+    background-color: var(--lightgrey);
+    height: 500px;
+    border-radius: 5px;
+}
+
+.graphLabel
+{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--midgrey);
+}
+
+.button
+{
+    all: unset;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    text-align: center;
+    border: 1px solid var(--bodygrey);
+    border-radius: 5px;
+    display: block;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.button.incDec
+{
+    display: inline;
+    width: 1rem;
+}
+
+.button:hover
+{
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+
+/* id */
+
+#introPara
+{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+#controls
+{
+    grid-area: 3 / 2 / 4 / 3;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem 0;
+}
+
+#changeSession
+{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#currentSession
+{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#viewGitHubRepo
+{
+    grid-area: 1 / 3 / 2 / 4;
+    width: 10rem;
+    margin: 0 auto;
+}
+
+#graphArea
+{
+    grid-area: 4 / 2 / 5 / 3;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+}
+
+#sessionMapPlotPM
+{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#sessionMapPlotTF
+{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#MapPlotPMLabel
+{
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#MapPlotTFLabel
+{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+#timeSeriesPMDF
+{
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+#timeSeriesLabel
+{
+    grid-area: 4 / 1 / 5 / 3;
+}
+
+#footer
+{
+    grid-area: 5 / 2 / 6 / 3;
+    padding: 1.5em;
+    border-top: 1px solid var(--bodygrey);
+}
+
+/* small viewports */
+
+@media only screen and (max-width: 1050px) 
+{
+    main 
+    {
+        grid-template-columns: 1.5rem 1fr 1.5rem;
+    }
+
+    #controls
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #graphArea
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    #currentSession
+    {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    
+    #viewGitHubRepo
+    {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+    #graphArea
+    {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    
+    #sessionMapPlotPM
+    {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    #sessionMapPlotTF
+    {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+    #MapPlotPMLabel
+    {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    
+    #MapPlotTFLabel
+    {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    
+    #timeSeriesPMDF
+    {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+    
+    #timeSeriesLabel
+    {
+        grid-area: 6 / 1 / 7 / 2;
+    }
+}
